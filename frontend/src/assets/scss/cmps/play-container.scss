@@ -1,0 +1,23 @@
+.play-container {
+
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    
+    .action-container {
+        
+        display: flex;
+        justify-content: space-between;
+        width: 98%;
+        z-index: $ELEVATION-3;
+
+        
+        .space{
+            margin-right: 20px;
+        }
+
+    }
+
+}

@@ -1,0 +1,49 @@
+.movie-filter-container {
+
+    margin-top: 32px;
+    margin-bottom: 32px;
+    margin-left: 20px;
+    margin-right: 100px;
+    background-color: #252833;
+    max-width: 100%;
+    border-radius: 10px;
+
+    .movie-filter {
+        display: flex;
+        flex: 1;
+        align-items: center;
+        height: 70px;
+
+        input {
+            height: 100%;
+            flex: 1;
+            border-top-style: hidden;
+            border-right-style: hidden;
+            border-left-style: hidden;
+            border-bottom-style: hidden;
+            background-color: transparent;
+            font-size: 1.8rem;
+            color: #e1e6f0;
+        }
+        
+        input::placeholder {
+            font-weight: bold;
+            opacity: 1;
+            color: #8f98b2;
+            letter-spacing: 1.8;
+        }
+
+        .no-outline:focus {
+            outline: none;
+        }
+
+        .icon{
+            width: 35px;;
+            height: 100%;
+            margin-left: 30px;
+            margin-right: 30px;
+            color: #e1e6f0;
+        }
+    }
+
+}

@@ -1,0 +1,29 @@
+.movie-slider {
+    position: relative;
+    width: 100%;
+    overflow-x: hidden;
+    margin: auto;
+    min-height: 100%;
+}
+
+.carousel {
+    display: flex;
+    width: 100%;
+    min-height: 100%;
+    position: relative;
+    margin: auto;
+    
+}
+
+.slider {
+    flex: 0 0 auto;
+    margin-right: 30px;
+    position: relative;
+    border-radius: 5px;
+    width: 100%;
+    min-height: 100%;
+    left: 0;
+    transition: 1s;
+    overflow: hidden;
+    
+}

@@ -1,0 +1,12 @@
+.search{
+
+    min-height: 100%;
+
+    .content{
+        margin-left: $PAGE-CONTENT-LEFT-SPACE;
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+    }
+}

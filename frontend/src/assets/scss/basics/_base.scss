@@ -1,0 +1,26 @@
+html {
+    overflow: auto;
+    overflow-x: hidden;
+    background-color: $clr1;
+    color: $clr2;
+
+    position: relative;
+}
+
+body{
+    margin: 0;
+    min-height: 100%;
+    
+    position: relative;
+
+}
+
+a{
+    color: inherit;
+    text-decoration: inherit;
+}
+
+.app{
+    position: relative;
+    min-height: 100vh;
+}

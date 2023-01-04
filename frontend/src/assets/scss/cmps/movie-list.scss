@@ -1,0 +1,12 @@
+.movie-list-container{
+    display: flex;
+    flex-direction: column;
+    margin-right: 30px;
+    
+    .movie-list {
+        display: flex;
+        font-family: Inter-Regular;
+        width: 100%;
+    }
+
+}

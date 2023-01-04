@@ -1,0 +1,11 @@
+.movie-details{
+
+    .content{
+        margin-left: $PAGE-CONTENT-LEFT-SPACE;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        height: 70%;
+
+    }
+}
