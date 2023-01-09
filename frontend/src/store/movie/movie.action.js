@@ -1,4 +1,4 @@
-import { movieService } from '../../services/movie.service.local'
+import { movieService } from '../../services/movie.service'
 // import { showSuccessMsg, showErrorMsg } from '../../services/event-bus.service'
 
 export function loadMovies() {

@@ -1,10 +1,10 @@
 import { httpService } from './http.service.js'
 
-export const toyService = {
+export const watchlistService = {
     query,
     getById,
     remove,
-    save
+    add
 }
 
 const BASE_URL = `watchlist/`
@@ -19,11 +19,16 @@ function remove(watchlistMovieId) {
     return httpService.delete(BASE_URL + watchlistMovieId).then(res => res)
 }
 
-function save(watchlistMovie) {
-    if (watchlistMovie._id) {
-        return httpService.put(BASE_URL + watchlistMovie._id, watchlistMovie).then(res => res)
-    } else {
-        return httpService.post(BASE_URL, watchlistMovie)
-            .then(res => res)
-    }
+// function save(watchlistMovie) {
+//     if (watchlistMovie._id) {
+//         return httpService.put(BASE_URL + watchlistMovie._id, watchlistMovie).then(res => res)
+//     } else {
+//         return httpService.post(BASE_URL, watchlistMovie)
+//             .then(res => res)
+//     }
+// }
+function add(watchlistMovie) {
+
+    return httpService.post(BASE_URL, watchlistMovie)
+        .then(res => res)
 }
