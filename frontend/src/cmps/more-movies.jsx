@@ -1,5 +1,5 @@
-// import { MoviePreview } from '../cmps/movie-preview'
-import { ResultPreview } from '../cmps/result-preview'
+import { MoviePreview } from '../cmps/movie-preview'
+// import { ResultPreview } from '../cmps/result-preview'
 
 
 export const MoreMovies = ({ allMovies, movies }) => {
@@ -32,7 +32,7 @@ export const MoreMovies = ({ allMovies, movies }) => {
         <>
             <h2>MORE RESULTS</h2>
             <section className='more-results'>
-                {getMoreResults(movies, allMovies).map(movie => <ResultPreview key={movie._id} movie={movie} />)}
+                {getMoreResults(movies, allMovies).map(movie => <MoviePreview key={movie._id} movie={movie} />)}
             </section>
         </>
     )
