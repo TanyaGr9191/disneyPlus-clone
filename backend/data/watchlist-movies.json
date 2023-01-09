@@ -1,0 +1,32 @@
+[
+  {
+    "_id": "t106",
+    "createdBy": "disney",
+    "year": "2016",
+    "rate": "9",
+    "backgroundImg": "https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/AAC4808815AE5721A6AAB372DD14B8CE2E7E9EFF3A27942EF2B6B45EBF4E65CB/scale?width=1440&aspectRatio=1.78&format=jpeg",
+    "cardImg": "https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/501783804F435A386DBC4736F529A8EF664B1817CCB0B552E52D825B85B0A97B/scale?width=400&aspectRatio=1.78&format=jpeg",
+    "description": "Moana sets sail on a daring mission to save her people. Along the way, she meets the mighty demigod Maui–together they cross the ocean on a fun-filled, action-packed voyage from Walt Disney Animation Studios.",
+    "subTitle": "2016 • 1h 47m • Family, Fantasy, Animation, Action-Adventure, Musical",
+    "title": "Moana",
+    "ytLink": "https://www.youtube.com/watch?v=LKFuXETZUsI",
+    "titleImg": "https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/9562874BAB22B22A698368819B9EBF30FEB0291543552EB2416A5A61A73F63F4/scale?width=1440&aspectRatio=1.78",
+    "type": "trending",
+    "movieImg": "http://cdn.shopify.com/s/files/1/2533/3248/products/00873Moana_Blackstone__Rounded_900x_38e8023b-7362-4809-adcc-af6f10bc2c62_grande.png?v=1633520171"
+  },
+  {
+    "_id": "t112",
+    "createdBy": "disney",
+    "year": "2021",
+    "rate": "5",
+    "backgroundImg": "https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/09A0617D43282F1A4FA1A97DF6159B4263A8DEB9679A007B61D5E5D6E5D0A2DD/scale?width=1440&aspectRatio=1.78&format=jpeg",
+    "cardImg": "https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/1E0501AFBAFCA1ABB5D31DBA7D1A913B2A35D70FD3DFD804939B71901577161D/scale?width=400&aspectRatio=1.78&format=jpeg",
+    "description": "Watch with Premier Access at the same time it's in open theaters and before it's available to all Disney+ subscribers on June 4, 2021.",
+    "subTitle": "2021 • 1h 52m • Family, Fantasy, Animation, Action-Adventure",
+    "title": "Raya",
+    "ytLink": "https://www.youtube.com/watch?v=1VIZ89FEjYI",
+    "titleImg": "https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/E7D8EFFDD30B2A0E205DDD9929207439B21E7595709769F2A23C50457664FFB2/scale?width=1440&aspectRatio=1.78",
+    "type": "new",
+    "movieImg": "https://imageio.forbes.com/specials-images/imageserve/60103c70a5763a98b912348a/-Raya-and-the-Last-Dragon--poster/0x0.jpg?format=jpg&width=960"
+  }
+]

@@ -61,7 +61,7 @@ function _makeId(length = 5) {
 function _saveMoviesToFile() {
     return new Promise((resolve, reject) => {
         const data = JSON.stringify(gMovies, null, 2)
-        fs.writeFile('data/toys.json', data, (err) => {
+        fs.writeFile('data/movies.json', data, (err) => {
             if (err) return reject('Cannot save to file')
             resolve()
         })

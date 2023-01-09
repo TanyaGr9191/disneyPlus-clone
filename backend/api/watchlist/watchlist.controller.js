@@ -1,5 +1,5 @@
 const express = require('express')
-const movieService = require('../../services/movie.service')
+const watchlistService = require('../../services/watchlist.service')
 const router = express.Router()
 
 module.exports = router
@@ -11,14 +11,14 @@ router.get('/', (req, res) => {
     // if(req.query.pageIdx) filterBy.pageIdx = req.query.pageIdx
     // if(req.query.userId) filterBy.userId = req.query.userId
 
-    movieService.query(filterBy)
+    watchlistService.query(filterBy)
         .then(movies => res.send(movies))
 })
 
 //READ
 router.get('/:movieId', (req, res) => {
     const { movieId } = req.params
-    movieService.getById(movieId)
+    watchlistService.getById(movieId)
         .then(movie => res.send(movie))
 })
 
@@ -26,27 +26,27 @@ router.get('/:movieId', (req, res) => {
 router.post('/', (req, res) => {
     let movie = req.body
     console.log('req.body', req.body)
-    movieService.save(movie)
+    watchlistService.add(movie)
         .then(movie => res.send(movie))
 })
 
 //UPDATE
-router.put('/:movieId', (req, res) => {
+// router.put('/:movieId', (req, res) => {
 
-    const movie = req.body
-    movieService.save(movie)
-        .then(movie => res.send(movie))
-        .catch((err) => {
-            console.log('error', err)
-            res.status(400).send('Cannot update movie!')
-        })
-})
+//     const movie = req.body
+//     watchlistService.save(movie)
+//         .then(movie => res.send(movie))
+//         .catch((err) => {
+//             console.log('error', err)
+//             res.status(400).send('Cannot update movie!')
+//         })
+// })
 
 //DELETE
 router.delete('/:movieId', (req, res) => {
 
     const { movieId } = req.params
-    movieService.remove(movieId)
+    watchlistService.remove(movieId)
         .then(() => res.send({ msg: 'Removed successfully' }))
         .catch((err)=>{
             console.log('error', err)

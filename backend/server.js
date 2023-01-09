@@ -20,9 +20,11 @@ if (process.env.NODE_ENV === 'production'){
 app.use(express.json())
 
 // Express Routing:
-const movieRoutes = require('./api/movie/movie.controller')
+const movieRoutes = require('./api/movies/movie.controller.js')
+const watchlistRoutes = require('./api/watchlist/watchlist.controller.js')
 
 app.use('/api/movie', movieRoutes)
+app.use('/api/watchlist', watchlistRoutes)
 
 app.get('/**', (req, res)=>{
     res.sendFile(path.join(__dirname, 'public', 'index.html'))
