@@ -1,6 +1,6 @@
 // Import the functions you need from the SDKs you need
 const firebase = require('firebase-admin')
-const serviceAccount = require('../firebase-config/service_key.json')
+const serviceAccount = require('../firebase_config/service_key.json')
 
 // Initialize Firebase
 firebase.initializeApp({

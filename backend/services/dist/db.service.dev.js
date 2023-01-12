@@ -3,7 +3,7 @@
 // Import the functions you need from the SDKs you need
 var firebase = require('firebase-admin');
 
-var serviceAccount = require('../firebase-config/service_key.json'); // Initialize Firebase
+var serviceAccount = require('../firebase_config/service_key.json'); // Initialize Firebase
 
 
 firebase.initializeApp({
