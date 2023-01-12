@@ -2,15 +2,15 @@
 
 The DisneyPlus-clone App is a web-application that allows you to browse and search for movies. The app is designed to provide a seamless and user-friendly experience for movie enthusiasts. The app's main features include:
 
-👉 User-friendly interface: The app has a sleek and modern design, with an intuitive and easy-to-use user interface.
+📌 User-friendly interface: The app has a sleek and modern design, with an intuitive and easy-to-use user interface.
 
 ![DisneyPlus-clone homepage](https://res.cloudinary.com/dxwlsxl5s/image/upload/v1673537638/2_h1obgq.jpg)
 
-👉 Watchlist: You can create and manage your own watchlist, where you can add movies and shows you want to watch later.
+📌 Watchlist: You can create and manage your own watchlist, where you can add movies and shows you want to watch later.
 
 ![DisneyPlus-clone watchlist](https://res.cloudinary.com/dxwlsxl5s/image/upload/v1673537742/7_myhmaz.jpg)
 
-👉 Movie and show browsing, you can browse through a collection of movies, with the ability to filter movies by title.
+📌 Movie and show browsing, you can browse through a collection of movies, with the ability to filter movies by title.
 
 ![DisneyPlus-clone watchlist](https://res.cloudinary.com/dxwlsxl5s/image/upload/v1673537878/8_mti8xr.jpg)
 
