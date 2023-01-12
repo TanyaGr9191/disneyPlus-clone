@@ -14,7 +14,7 @@ The DisneyPlus-clone App is a web-application that allows you to browse and sear
 
 ![DisneyPlus-clone watchlist](https://res.cloudinary.com/dxwlsxl5s/image/upload/v1673537878/8_mti8xr.jpg)
 
-## 💻 Technology
+## :zap: Technology
 
 The app is built using React.js for the front-end, JavaScript for the logic, SCSS for styling, Node.js for the back-end and Firebase for data storage and retrieval. The app also utilizes a RESTful API to connect to the Firebase database.
 
