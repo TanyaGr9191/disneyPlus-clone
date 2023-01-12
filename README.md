@@ -1,4 +1,4 @@
-# 🚀 App Overview
+# 🚀 Overview of the application
 
 The DisneyPlus-clone App is a web-application that allows you to browse and search for movies. The app is designed to provide a seamless and user-friendly experience for movie enthusiasts. The app's main features include:
 
