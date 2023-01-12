@@ -1,5 +1,4 @@
 import { Route, Routes } from 'react-router-dom'
-// import { AppHeader } from './cmps/app-header'
 import { AppFooter } from './cmps/app-footer'
 import routes from './routes'
 import './assets/scss/styles.scss'

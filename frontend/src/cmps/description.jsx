@@ -8,6 +8,7 @@ export const Description = ({ movie }) => {
         return subTitle.split(' • ')
     }
 
+    if(!movie) return <div>Loading description...</div>
     return (
         <div className="movie-description">
             <div className="description">

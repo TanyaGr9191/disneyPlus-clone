@@ -1,55 +1,40 @@
-const express = require('express')
-const movieService = require('../../services/movie.service')
-const router = express.Router()
+const movieService = require('./movie.service')
+const logger = require('../../services/logger.service')
 
-module.exports = router
+// GET LIST
+async function getMovies(req, res) {
+  try {
+    logger.debug('Getting Movies')
+    var queryParams = req.query
+    const movies = await movieService.query(queryParams)
+    res.json(movies)
+  } catch (err) {
+    logger.error('Failed to get movies', err)
+    res.status(500).send({ err: 'Failed to get movies' })
+  }
+}
+
+// GET BY ID 
+async function getMovieById(req, res) {
+  try {
+    const movieId = req.params.id
+    // Get movie data from firebase colleciton
+    const movieSnapshot = await movieService.getById(movieId)
+    // Save data to our roundData variable
+    let movie = []
+    movie.push({
+      _id: movieSnapshot.id,
+      ...movieSnapshot.data()
+    })
+    res.json(...movie)
+  } catch (err) {
+    logger.error('Failed to get movie', err)
+    res.status(500).send({ err: 'Failed to get movie' })
+  }
+}
 
 
-//LIST
-router.get('/', (req, res) => {
-    const filterBy = { title: req.query.title || ''}
-    // if(req.query.pageIdx) filterBy.pageIdx = req.query.pageIdx
-    // if(req.query.userId) filterBy.userId = req.query.userId
-
-    movieService.query(filterBy)
-        .then(movies => res.send(movies))
-})
-
-//READ
-router.get('/:movieId', (req, res) => {
-    const { movieId } = req.params
-    movieService.getById(movieId)
-        .then(movie => res.send(movie))
-})
-
-//CREATE
-router.post('/', (req, res) => {
-    let movie = req.body
-    console.log('req.body', req.body)
-    movieService.save(movie)
-        .then(movie => res.send(movie))
-})
-
-//UPDATE
-router.put('/:movieId', (req, res) => {
-
-    const movie = req.body
-    movieService.save(movie)
-        .then(movie => res.send(movie))
-        .catch((err) => {
-            console.log('error', err)
-            res.status(400).send('Cannot update movie!')
-        })
-})
-
-//DELETE
-router.delete('/:movieId', (req, res) => {
-
-    const { movieId } = req.params
-    movieService.remove(movieId)
-        .then(() => res.send({ msg: 'Removed successfully' }))
-        .catch((err)=>{
-            console.log('error', err)
-            res.status(400).send('Cannot remove movie, NOT YOUR MOVIE!')
-        })
-})
+module.exports = {
+  getMovies,
+  getMovieById
+}

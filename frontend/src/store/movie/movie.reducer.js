@@ -28,6 +28,6 @@ export function movieReducer(state = INITIAL_STATE, action) {
     // window.movieState = newState
     // console.log('Prev State:', state)
     // console.log('Action:', action)
-    console.log('New State:', newState)
+    // console.log('New State:', newState)
     return newState
 }

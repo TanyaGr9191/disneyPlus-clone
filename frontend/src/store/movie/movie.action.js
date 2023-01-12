@@ -30,15 +30,6 @@ export function loadMovie(movieId) {
     }
 }
 
-// export function resetMovie(movie) {
-//     return (dispatch) => {
-//         try {
-//             dispatch({ type: 'SET_MOVIE', movie })
-//         } catch (err) {
-//             console.log('Cannot reset movie')
-//         }
-//     }
-// }
 
 export function setFilterBy(filterBy) {
     return (dispatch) => {

@@ -4,7 +4,7 @@ export function loadWatchlist() {
     return async (dispatch) => {
         try{
             const watchlistMovies = await watchlistService.query()
-            console.log('watchlistMovies from DB:', watchlistMovies)
+            // console.log('watchlistMovies from DB:', watchlistMovies)
             dispatch({ type: 'SET_WATCHLIST', watchlistMovies })
         } catch(err){
             console.log('Cannot set watchlist')

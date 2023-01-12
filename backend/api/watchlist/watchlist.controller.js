@@ -1,55 +1,61 @@
-const express = require('express')
-const watchlistService = require('../../services/watchlist.service')
-const router = express.Router()
-
-module.exports = router
+const watchlistService = require('./watchlist.service')
+const logger = require('../../services/logger.service')
 
 
-//LIST
-router.get('/', (req, res) => {
-    const filterBy = { title: req.query.title || ''}
-    // if(req.query.pageIdx) filterBy.pageIdx = req.query.pageIdx
-    // if(req.query.userId) filterBy.userId = req.query.userId
 
-    watchlistService.query(filterBy)
-        .then(movies => res.send(movies))
-})
+// GET LIST
+async function getWatchlist(req, res) {
+    try {
+        logger.debug('Getting Watchlist')
+        const watchlist = await watchlistService.query()
+        res.json(watchlist)
+    } catch (err) {
+        logger.error('Failed to get watchlist', err)
+        res.status(500).send({ err: 'Failed to get watchlist' })
+    }
+}
 
-//READ
-router.get('/:movieId', (req, res) => {
-    const { movieId } = req.params
-    watchlistService.getById(movieId)
-        .then(movie => res.send(movie))
-})
+// GET BY ID 
+async function getWatchlistMovieById(req, res) {
+    try {
+        const watchlistMovieId = req.params.id
+        // Get movie data from firebase colleciton
+        const watchlistMovie = await watchlistService.getById(watchlistMovieId)
+        res.json(watchlistMovie)
+    } catch (err) {
+        logger.error('Failed to get watchlist movie', err)
+        res.status(500).send({ err: 'Failed to get watchlist movie' })
+    }
+}
 
-//CREATE
-router.post('/', (req, res) => {
-    let movie = req.body
-    console.log('req.body', req.body)
-    watchlistService.add(movie)
-        .then(movie => res.send(movie))
-})
+// POST (add movie to watchlist)
+async function addMovie(req, res) {
+    try {
+      const watchlistMovie = req.body
+      const addedMovie = await watchlistService.add(watchlistMovie)
+      res.json(addedMovie)
+    } catch (err) {
+      logger.error('Failed to add movie to watchlist', err)
+      res.status(500).send({ err: 'Failed to add movie to watchlist' })
+    }
+  }
 
-//UPDATE
-// router.put('/:movieId', (req, res) => {
 
-//     const movie = req.body
-//     watchlistService.save(movie)
-//         .then(movie => res.send(movie))
-//         .catch((err) => {
-//             console.log('error', err)
-//             res.status(400).send('Cannot update movie!')
-//         })
-// })
+// DELETE (Remove movie from watchlist)
+async function removeMovie(req, res) {
+    try {
+      const watchlistMovieId = req.params.id
+      const removedId = await watchlistService.remove(watchlistMovieId)
+      res.send(removedId)
+    } catch (err) {
+      logger.error('Failed to remove movie from watchlist', err)
+      res.status(500).send({ err: 'Failed to remove movie from watchlist' })
+    }
+  }
 
-//DELETE
-router.delete('/:movieId', (req, res) => {
-
-    const { movieId } = req.params
-    watchlistService.remove(movieId)
-        .then(() => res.send({ msg: 'Removed successfully' }))
-        .catch((err)=>{
-            console.log('error', err)
-            res.status(400).send('Cannot remove movie, NOT YOUR MOVIE!')
-        })
-})
+module.exports = {
+    getWatchlist,
+    getWatchlistMovieById,
+    addMovie,
+    removeMovie
+}

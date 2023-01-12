@@ -4,9 +4,6 @@ import { MoviePreview } from '../cmps/movie-preview'
 
 export const MoreMovies = ({ allMovies, movies }) => {
 
-    console.log('movies', movies)
-    console.log('allMovies', allMovies)
-
     const getMoreResults = (movies, allMovies) => {
         let moreResults = []
 
