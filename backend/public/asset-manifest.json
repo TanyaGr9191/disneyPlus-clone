@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/static/css/main.1a934517.css",
+    "main.js": "/static/js/main.90d54885.js",
+    "static/media/national-geographic-video.mp4": "/static/media/national-geographic-video.bf1b675d8d0beb6c25bc.mp4",
+    "static/media/pixar-video.mp4": "/static/media/pixar-video.971baf2b0d1f60c27f42.mp4",
+    "static/media/star-wars-video.mp4": "/static/media/star-wars-video.4307c8746c3270d4b66b.mp4",
+    "static/media/disney-video.mp4": "/static/media/disney-video.76f717a34732ff5c5752.mp4",
+    "static/media/marvel-video.mp4": "/static/media/marvel-video.25a822f51e652dec1417.mp4",
+    "static/media/national-geographic-bg.jpg": "/static/media/national-geographic-bg.b278d4dcf14f99f018ae.jpg",
+    "static/media/marvel-bg.jpg": "/static/media/marvel-bg.8d9d2d5ca3833d2f7cf0.jpg",
+    "static/media/00873Moana_Blackstone__Rounded_900x_38e8023b-7362-4809-adcc-af6f10bc2c62_grande.png": "/static/media/00873Moana_Blackstone__Rounded_900x_38e8023b-7362-4809-adcc-af6f10bc2c62_grande.7308b830687850d5ad06.png",
+    "static/media/Inter-Regular.ttf": "/static/media/Inter-Regular.e89cb19905e7db5591b0.ttf",
+    "static/media/disney-bg.jpg": "/static/media/disney-bg.268784c6b369c87bd35c.jpg",
+    "static/media/star-wars-bg.jpg": "/static/media/star-wars-bg.5a26a525c7e682947b1b.jpg",
+    "static/media/pixar-bg.jpg": "/static/media/pixar-bg.f57ef4c8b4eb5b34312b.jpg",
+    "static/media/star-wars.png": "/static/media/star-wars.0cfd151200be499da40d.png",
+    "static/media/disney.png": "/static/media/disney.a609e05e698c1a672e0d.png",
+    "static/media/national-geographic.png": "/static/media/national-geographic.f8f6cea005e51ec417d0.png",
+    "static/media/logo.svg": "/static/media/logo.a5418b7de68995d6dce490674545b207.svg",
+    "static/media/marvel.png": "/static/media/marvel.9ac742996543b649e038.png",
+    "static/media/pixar.png": "/static/media/pixar.9faf9667b75957d2f9d6.png",
+    "index.html": "/index.html",
+    "main.1a934517.css.map": "/static/css/main.1a934517.css.map",
+    "main.90d54885.js.map": "/static/js/main.90d54885.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1a934517.css",
+    "static/js/main.90d54885.js"
+  ]
+}
